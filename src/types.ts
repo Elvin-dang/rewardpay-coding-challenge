@@ -4,7 +4,7 @@ export interface AccountData {
   account_currency: string;
   account_identifier: string;
   account_status: string;
-  value_type: "debit" | "credit";
+  value_type: string;
   account_name: string;
   account_type: string;
   account_type_bank: string;

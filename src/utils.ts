@@ -70,7 +70,12 @@ export const calculateWorkingCapitalRatio = (data: AccountData[]): number => {
 /* Currency Formatting */
 
 export const formatCurrency = (value: number): string => {
-  return "$" + value.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return (
+    "$" +
+    Math.floor(value)
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+  );
 };
 
 export const formatPercentage = (value: number): string => {
